@@ -25,12 +25,16 @@
 	
     <div class="container">        
 
-        <h3 class="page-header" id="procedures">Procedures for Finding Smell Removal Patterns</h3>
+        <h3 class="page-header" id="procedures">Detailed Procedures for Finding Smell Removal Patterns</h3>
+	<ol>
+	<li><strong>Selection of Projects.</strong> We selected a set of Java software projects from Github to analyze. To select them, we followed systematic criteria. We selected projects with (1) different levels of popularity -- based on the number of Github stars, (2) an active issue tracking system, and (3) at least 90% of code written in Java. These criteria allowed us to select 48 heterogeneous projects with a diversity of structure, domain, size and popularity. Details about the projects are available at the <a href="http://refactoringheuristics.github.io/patterns-heuristics.zip">"Composite patterns and heuristics"</a> artifacts.</li>
+		
+        <li><strong>Detection of Smells and Refactorings.</strong> In this step, we used rule-based detection strategies for code smells. The rules are based on state-of-the-art metrics and thresholds. We selected these rules because they are refinements of traditional rules that are used in previous related studies. The detection of smells is an important step in the identification of the composites that were able to remove smells. For finding refactorings, we opted for the <a href="https://github.com/tsantalis/RefactoringMiner">Refactoring Miner</a> tool. According to previous studies, Refactoring Miner has precision of 98% and recall of 87%. We considered all 14 refactoring types identified by the tool, which represent the most common refactoring types applied by developers.</li>
 
-        <p class="text-justify">
-        
-        </p>
+	<li><strong>Finding Composite Refactorings.</strong> To find composite refactorings we applied a synthesis strategy that is able to identify both temporally-related composites and spatial composites.</li>
 
+	<li><strong>Identifying Removal Patterns.</strong> After finding composite refactorings, we classified them according to their impact on code smells. Such impact could be the persistence (i.e., no effect), introduction, or removal of code smells. Finally, we identified recurrent composite refactoring patterns related to the removal of Feature Envy, God Class, and Complex Class. This identification was based on the frequency with which each pattern resulted in the removal of a smell type. We only selected patterns that resulted in the removal of smells in at least 50% of all occurrences. In this way, we guarantee that the selected patterns have a satisfactory potential for the effective removal of smells.</li>
+	</ol>
     </div>
 
     <div class="container">

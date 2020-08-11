@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Recommending Composite Refactorings for Smell Removal: Heuristics and Evaluation</title>   
 </head>
+Authors: Willian Oizumi, Diego Cedrim, Leonardo Sousa, Ana Carla Bibiano, Anderson Oliveira, Alessandro Garcia, Daniel Oliveira
 
 <body>        
     <div class="container">
@@ -37,6 +38,425 @@
 	<li><strong>Identifying Removal Patterns.</strong> After finding composite refactorings, we classified them according to their impact on code smells. Such impact could be the persistence (i.e., no effect), introduction, or removal of code smells. Finally, we identified recurrent composite refactoring patterns related to the removal of Feature Envy, God Class, and Complex Class. This identification was based on the frequency with which each pattern resulted in the removal of a smell type. We only selected patterns that resulted in the removal of smells in at least 50% of all occurrences. In this way, we guarantee that the selected patterns have a satisfactory potential for the effective removal of smells.</li>
 	</ol>
     </div>
+	
+    <div class="container">
+	     <h3 class="page-header" id="results">Summarized Results of the quasi-experiment</h3>
+		    <table style="border-collapse: collapse; border: none; border-spacing: 0px;">
+		<tr>
+			<td style="background-color: rgb(192, 192, 192); border-right: 1px solid black; border-top: 1px solid black; border-bottom: 1px solid black; text-align: center; padding-right: 3pt; padding-left: 3pt;">
+				 <b>Code</b>
+				<br>
+				 <b>Smell</b>
+			</td>
+			<td style="background-color: rgb(192, 192, 192); border-right: 1px solid black; border-top: 1px solid black; border-bottom: 1px solid black; text-align: center; padding-right: 3pt; padding-left: 3pt;">
+				<b>Class</b>
+			</td>
+			<td style="background-color: rgb(192, 192, 192); border-right: 1px solid black; border-top: 1px solid black; border-bottom: 1px solid black; text-align: center; padding-right: 3pt; padding-left: 3pt;">
+				<b>Pos.</b>
+			</td>
+			<td style="background-color: rgb(192, 192, 192); border-right: 1px solid black; border-top: 1px solid black; border-bottom: 1px solid black; text-align: center; padding-right: 3pt; padding-left: 3pt;">
+				<b>Int.</b>
+			</td>
+			<td style="background-color: rgb(192, 192, 192); border-right: 1px solid black; border-top: 1px solid black; border-bottom: 1px solid black; text-align: center; padding-right: 3pt; padding-left: 3pt;">
+				<b>Neg.</b>
+			</td>
+			<td style="background-color: rgb(192, 192, 192); border-right: 1px solid black; border-top: 1px solid black; border-bottom: 1px solid black; text-align: center; padding-right: 3pt; padding-left: 3pt;">
+				<b>Sug.</b>
+			</td>
+			<td style="background-color: rgb(192, 192, 192); border-right: 1px solid black; border-top: 1px solid black; border-bottom: 1px solid black; text-align: center; padding-right: 3pt; padding-left: 3pt;">
+				<b>Only</b>
+				<br>
+				 <b>Positive</b>
+			</td>
+			<td style="background-color: rgb(192, 192, 192); border-right: 1px solid black; border-top: 1px solid black; border-bottom: 1px solid black; text-align: center; padding-right: 3pt; padding-left: 3pt;">
+				<b>Only</b>
+				<br>
+				 <b>Negative</b>
+			</td>
+			<td style="background-color: rgb(192, 192, 192); border-right: 1px solid black; border-top: 1px solid black; border-bottom: 1px solid black; text-align: center; padding-right: 3pt; padding-left: 3pt;">
+				<b>Both</b>
+			</td>
+			<td style="background-color: rgb(192, 192, 192); border-right: 1px solid black; border-top: 1px solid black; border-bottom: 1px solid black; text-align: center; padding-right: 3pt; padding-left: 3pt;">
+				<b>None</b>
+			</td>
+			<td style="background-color: rgb(192, 192, 192); border-right: 1px solid black; border-top: 1px solid black; border-bottom: 1px solid black; text-align: center; padding-right: 3pt; padding-left: 3pt;">
+				<b># of Pos.</b>
+				<br>
+				 <b>Sentences</b>
+			</td>
+			<td style="background-color: rgb(192, 192, 192); border-top: 1px solid black; border-bottom: 1px solid black; text-align: center; padding-right: 3pt; padding-left: 3pt;">
+				<b># of Neg.</b>
+				<br>
+				 <b>Sentences</b>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="3" style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+				 <b>Complex</b>
+				<br>
+				<b> Class</b>
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+				Clause
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				6
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				4
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				2
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				2
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				3
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				2
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				6
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				1
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				11
+			</td>
+			<td style="border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				10
+			</td>
+		</tr>
+		<tr>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+				GenericTranspalBean
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				11
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				0
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				1
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				3
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				7
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				2
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				3
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				0
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				15
+			</td>
+			<td style="border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				6
+			</td>
+		</tr>
+		<tr>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+				DiarioClasseService
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				10
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				2
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				0
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				4
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				10
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				1
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				1
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				0
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				17
+			</td>
+			<td style="border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				2
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="3" style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+				 <b>Feature</b>
+				<br>
+				<b> Envy</b>
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+				IngressoUniversidadeService
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				7
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				5
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				0
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				5
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				5
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				1
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				5
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				1
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				19
+			</td>
+			<td style="border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				7
+			</td>
+		</tr>
+		<tr>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+				Media
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				10
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				2
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				0
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				2
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				11
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				0
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				1
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				0
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				14
+			</td>
+			<td style="border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				1
+			</td>
+		</tr>
+		<tr>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+				UserFactory
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				10
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				1
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				1
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				5
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				4
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				1
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				5
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				2
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				11
+			</td>
+			<td style="border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				8
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="3" style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+				 <b>God</b>
+				<br>
+				<b> Class</b>
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+				MatriculaAcademicaService
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				7
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				4
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				1
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				2
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				7
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				3
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				1
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				1
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				10
+			</td>
+			<td style="border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				7
+			</td>
+		</tr>
+		<tr>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+				LibraryMainControl
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				10
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				2
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				0
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				1
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				10
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				1
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				1
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				0
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				14
+			</td>
+			<td style="border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				2
+			</td>
+		</tr>
+		<tr>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+				EmployeeUtils
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				9
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				1
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				2
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				2
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				6
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				2
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				3
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				0
+			</td>
+			<td style="border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				17
+			</td>
+			<td style="border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				7
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="background-color: rgb(255, 255, 255); border-right: 1px solid black; border-bottom: 1px solid black; text-align: center; padding-right: 3pt; padding-left: 3pt;">
+				 <b>All</b>
+			</td>
+			<td style="background-color: rgb(255, 255, 255); border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+				80 (74%)
+			</td>
+			<td style="background-color: rgb(255, 255, 255); border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				21 (20%)
+			</td>
+			<td style="background-color: rgb(255, 255, 255); border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				7 (6%)
+			</td>
+			<td style="background-color: rgb(255, 255, 255); border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				26 (24%)
+			</td>
+			<td style="background-color: rgb(255, 255, 255); border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				63 (59%)
+			</td>
+			<td style="background-color: rgb(255, 255, 255); border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				13 (12%)
+			</td>
+			<td style="background-color: rgb(255, 255, 255); border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				26 (24%)
+			</td>
+			<td style="background-color: rgb(255, 255, 255); border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				5 (5%)
+			</td>
+			<td style="background-color: rgb(255, 255, 255); border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				128
+			</td>
+			<td style="background-color: rgb(255, 255, 255); border-right: 1px solid black; border-bottom: 1px solid black; text-align: right; padding-right: 3pt; padding-left: 3pt;">
+				50
+			</td>
+		</tr>
+	</table>
+	</div>
 
     <div class="container">
 
